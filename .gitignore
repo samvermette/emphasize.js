@@ -1,6 +1,7 @@
 # osx noise
 .DS_Store
 profile
+*.esproj
 
 # xcode noise
 build/*
