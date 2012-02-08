@@ -1,6 +1,6 @@
 (function() {
   var Emphasize = { "languages": [], "rules": [] };
-  Emphasize.languages = ["obj-c", "ruby"];
+  Emphasize.languages = ["obj-c"];
 
   Emphasize.rules["obj-c"] = [
     [/(#)(.+)(\n)/g, "<em class='em-preprocessor'>$1$2</em>$3"],
