@@ -17,7 +17,7 @@
     [/(\s+|:)(YES|NO|return|break|continue|)(\s+|;)/g, "$1<em class='em-keyword'>$2</em>$3"],
     [/(\/\/)(.*)(\n)/g, "<em class='em-comment'>$1$2$3</em>"],
     [/([0-9])/g, "<em class='em-number'>$1</em>"]
-  ]
+  ];
 
   Emphasize.query = ".emphasize." + Emphasize.languages.join(",.emphasize.");
   Emphasize.regex = new RegExp("(\\s|^)("+Emphasize.languages.join("|")+")(\\s|$)", "i");
@@ -35,7 +35,7 @@
         }
       }
 
-      block.innerHTML = text
+      block.innerHTML = text;
   };
 
 })();
