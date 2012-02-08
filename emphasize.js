@@ -1,5 +1,5 @@
 (function() {
-  var Emphasize = { "languages": [], "rules": [] };
+  var Emphasize = { "rules": {} };
   Emphasize.languages = ["obj-c"];
 
   Emphasize.rules["obj-c"] = [
