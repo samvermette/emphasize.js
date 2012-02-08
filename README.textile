@@ -1,10 +1,10 @@
-h1. Emphasize.js
+h1. emphasize.js
 
-Emphasize.js is a tiny javascript that does code syntax highlighting. It only loads at the end of the document so it doesn't delay page loading. Right now it only supports Objective-C but feel free to fork it, add your favorite language to it and hit me back with a pull request.
+emphasize.js is a tiny javascript that does code syntax highlighting. It only loads at the end of the document so it doesn't delay page loading. Right now it only supports Objective-C but feel free to fork it, add your favorite language to it and hit me back with a pull request.
 
 h2. Installation
 
-Emphasize.js consists of 2 files: emphasize.js (which does the syntax highlighting) and emphasize.css, where you can customize your color them. Place these 2 files anywhere you want, and place the following anywhere you'll need code syntax highlighting: 
+emphasize.js consists of 2 files: @emphasize.js@ (which does the syntax highlighting) and @emphasize.css@ (where you can customize your color theme). Place these files anywhere you want, and place the following right before the @</body>@ tag in every page where you'll need it: 
 
 <pre>
 <script type="text/javascript">
@@ -21,24 +21,20 @@ Emphasize.js consists of 2 files: emphasize.js (which does the syntax highlighti
 </script>
 </pre>
 
-(as you can see Emphasize.js doesn't do javascript syntax highlighting yet)
-
-Once that's done make sure you import emphasize.css in your header:
+Once that's done make sure you import @emphasize.css@ in your header:
 
 <pre>
 <link rel="stylesheet" href="emphasize.css">
 </pre>
 
-To syntax highlight a block of code (usually encapsulated within a pre or code tag), just give it the @emphasize@ followed by the language to be highlighted (right now only @obj-c@ is supported):
+To syntax highlight a block of code (usually encapsulated within a @<pre>@ or @<code>@ tag), just give it the @emphasize@ class followed by the language to be highlighted (right now only @obj-c@ is supported):
 
-<pre>
-<pre class="emphasize obj-c"></pre>
-</pre>
+@<pre class="emphasize obj-c"></pre>@
 
 Change the colors in your local copy of emphasize.css.
 
 h2. About emphasize.js
 
-I did this small project because I think Gist does a pretty bad job at syntax-highlighting Objective-C code. Plus, if you come to have more than a few of these within a single page, the “brought to you by Gist” add a lots of noise to the page. So I felt like this was a great opportunity to gets my hands dirty with javascript and regular expressions to make a really simple and yet effective syntax highlighting engine. Regex has always been hostile territorry for me and every time I had to write a simple one I ended up spending way too much time doing so.
+I did this small project because I think Gist does a pretty bad job at syntax-highlighting Objective-C code. Plus, if you come to have more than a few of these within a single page, the “brought to you by Gist”s can get annoying. So I felt like this was a great opportunity for me to gets my hands dirty with javascript and regular expressions and make a really simple and yet effective syntax highlighting engine.
 
-The code detection isn’t perfect and won’t adapt to every coding style, but as most of my open source projects I release this first version as it fulfilled my own needs. Hopefully some of you will like it enough to add your favorite language to it.
+The code detection isn’t perfect and won’t adapt to every Cocoa dev's coding style, but as with most of my open source projects I release this first version as it fulfilled my own needs. Hopefully some of you will like it enough to perfect the detection and/or add your favorite language to it.
