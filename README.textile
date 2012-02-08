@@ -1,6 +1,6 @@
 h1. emphasize.js
 
-emphasize.js is a tiny javascript that does code syntax highlighting. It only loads at the end of the document so it doesn't delay page loading. Right now it only supports Objective-C but feel free to fork it, add your favorite language to it and hit me back with a pull request.
+emphasize.js is a tiny javascript that does code syntax highlighting. It only loads at the end of the document so it doesn't delay page loading. **Right now it only supports Objective-C** but as it's "open-source":https://github.com/samvermette/emphasize.js, feel free to contribute by adding your favorite language to it.
 
 h2. Installation
 
@@ -21,20 +21,26 @@ emphasize.js consists of 2 files: @emphasize.js@ (which does the syntax highligh
 </script>
 </pre>
 
-Once that's done make sure you import @emphasize.css@ in your header:
+This project is still in its early days and will probably receive significant changes in the coming weeks, so you might want to link directly to the github version of @emphasize.js@. To do so, replace @emphasize.js@ in @t.src@ with:
+
+<pre>https://raw.github.com/samvermette/emphasize.js/master/emphasize.js</pre>
+
+Once that's done make sure you import "@emphasize.css@":https://github.com/samvermette/emphasize.js/blob/master/emphasize.css in your header:
 
 <pre>
 <link rel="stylesheet" href="emphasize.css">
 </pre>
 
-To syntax highlight a block of code (usually encapsulated within a @<pre>@ or @<code>@ tag), just give it the @emphasize@ class followed by the language to be highlighted (right now only @obj-c@ is supported):
+To syntax highlight a block of code (usually encapsulated within a @<pre>@ or @<code>@ tag), just give it the @emphasize@ class followed by the language (right now only @obj-c@ is supported):
 
-@<pre class="emphasize obj-c"></pre>@
+<pre>
+<pre class="emphasize obj-c"></pre>
+</pre>
 
-Change the colors in your local copy of emphasize.css.
+Change the colors in your local copy of @emphasize.css@.
 
 h2. About emphasize.js
 
-I did this small project because I think Gist does a pretty bad job at syntax-highlighting Objective-C code. Plus, if you come to have more than a few of these within a single page, the “brought to you by Gist”s can get annoying. So I felt like this was a great opportunity for me to gets my hands dirty with javascript and regular expressions and make a really simple and yet effective syntax highlighting engine.
+I did this small project because I think Gist does a pretty bad job at syntax-highlighting Objective-C code. Plus, if you come to have more than a few of these within a single page, the “brought to you by Gist”s can get annoying. So I felt like this was a great opportunity for me to get my hands dirty with javascript and regex and make a really simple and yet effective syntax highlighting engine.
 
-The code detection isn’t perfect and won’t adapt to every Cocoa dev's coding style, but as with most of my open source projects I release this first version as it fulfilled my own needs. Hopefully some of you will like it enough to perfect the detection and/or add your favorite language to it.
+The code detection isn’t perfect and won’t adapt to every Cocoa dev's coding style, but as with most of my open source projects, I released this first version because it fulfilled my own needs. Hopefully some of you will like it enough to perfect the detection and/or add your favorite language to it.
