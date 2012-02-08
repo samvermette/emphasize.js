@@ -27,9 +27,9 @@
       var block = blocks[i];
       var text = block.innerText.replace(/\</g, "&lt;").replace(/\>/g, "&gt;");
 
-      if (language = block.className.match(Emphasize.regex)) {
+      if(language = block.className.match(Emphasize.regex)) {
         var rules = Emphasize.rules[language[2]];
-        for (var r = 0; r < rules.length; r++) {
+        for(var r = 0; r < rules.length; r++) {
           var rule = rules[r];
           text = text.replace(rule[0], rule[1]);
         }
