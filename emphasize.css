@@ -1,0 +1,15 @@
+.emphasize * {
+    font-family: inherit;
+    font-style: normal;
+}
+
+.emphasize.obj-c .em-class { color: #3b96ad; }
+.emphasize.obj-c .em-number { color: #2a35d5; }
+.emphasize.obj-c .em-keyword { color: #bc3faa; }
+.emphasize.obj-c .em-method { color: #3b96ad; }
+.emphasize.obj-c .em-property { color: #3b96ad; }
+.emphasize.obj-c .em-constant { color: #74770b; }
+.emphasize.obj-c .em-preprocessor { color: #76472c; }
+
+.emphasize.obj-c .em-string, .emphasize .em-string * { color: #b1221f; }
+.emphasize.obj-c .em-comment, .emphasize .em-comment * { color: #098d10; }
