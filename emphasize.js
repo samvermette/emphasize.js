@@ -26,7 +26,7 @@
   var blocks = document.querySelectorAll(Emphasize.query);
   for(var i = 0; i < blocks.length; i++) {
       var block = blocks[i];
-      var text = (block.textContent || block.innerText).replace(/\</g, "&lt;").replace(/\>/g, "&gt;");
+      var text = (block.textContent || block.innerText).replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
       if(language = block.className.match(Emphasize.regex)) {
         var rules = Emphasize.rules[language[2]];
