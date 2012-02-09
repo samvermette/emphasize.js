@@ -21,12 +21,13 @@
   ];
 
   Emphasize.query = ".emphasize." + Emphasize.languages.join(",.emphasize.");
-  Emphasize.regex = new RegExp("(\\s|^)("+Emphasize.languages.join("|")+")(\\s|$)", "i");
+  Emphasize.regex = new RegExp("(\\s|^)(" + Emphasize.languages.join("|") + ")(\\s|$)", "i");
 
   var blocks = document.querySelectorAll(Emphasize.query);
   for(var i = 0; i < blocks.length; i++) {
-      var block = blocks[i];
-      var text = block.innerText.replace(/\</g, "&lt;").replace(/\>/g, "&gt;");
+      var block = blocks[i],
+          text = (block.textContent || block.innerText).replace(/</g, "&lt;").replace(/>/g, "&gt;"),
+          language;
 
       if(language = block.className.match(Emphasize.regex)) {
         var rules = Emphasize.rules[language[2]];
