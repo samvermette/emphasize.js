@@ -10,13 +10,14 @@
     [/(#.*)("|&lt;)(.*)("|&gt;)/g, "$1<em class='em-string'>$2$3$4</em>"],
     [/(\s+)(\w+)(:|])/g, "$1<em class='em-method'>$2</em>$3"],
     [/(\.)([a-zA-Z]{3,})(\s{1}|]|;|\)|,)/g, "$1<em class='em-property'>$2</em>$3"],
-    [/(:)([A-Z]{2}\w{3,})(\s|])/g, "$1<em class='em-constant'>$2</em>$3"],
-    [/(self|super|nil|void|@end|@implementation|@synthesize|@property|@interface|@selector|@class)/g, "<em class='em-keyword'>$1</em>"],
+    [/(:|\s+)([A-Z]{2}\w{3,})(;|\s|])/g, "$1<em class='em-constant'>$2</em>$3"],
+    [/(self|super|nil|@end|@implementation|@synthesize|@property|@interface|@selector|@class)/g, "<em class='em-keyword'>$1</em>"],
     [/(\s+|\(|,)(strong|retain|weak|assign|nonatomic|atomic)(\s+|,|\))/g, "$1<em class='em-keyword'>$2</em>$3"],
     [/(\s+)(for|while|do|if|else|break|in)(\s+|\()/g, "$1<em class='em-keyword'>$2</em>$3"],
     [/(\s+|:)(YES|NO|return|break|continue|)(\s+|;)/g, "$1<em class='em-keyword'>$2</em>$3"],
+    [/(\s+|\()(void|BOOL)(\s+|\))/g, "$1<em class='em-keyword'>$2</em>$3"],
     [/(\/\/)(.*)(\n)/g, "<em class='em-comment'>$1$2$3</em>"],
-    [/([0-9])/g, "<em class='em-number'>$1</em>"]
+    [/(\s+|:|,)([0-9])(\s+|:|,|;)/g, "$1<em class='em-number'>$2</em>$3"]
   ];
 
   Emphasize.query = ".emphasize." + Emphasize.languages.join(",.emphasize.");
