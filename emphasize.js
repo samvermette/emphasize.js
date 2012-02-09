@@ -21,7 +21,7 @@
   ];
 
   Emphasize.query = ".emphasize." + Emphasize.languages.join(",.emphasize.");
-  Emphasize.regex = new RegExp("(\\s|^)("+Emphasize.languages.join("|")+")(\\s|$)", "i");
+  Emphasize.regex = new RegExp("(\\s|^)(" + Emphasize.languages.join("|") + ")(\\s|$)", "i");
 
   var blocks = document.querySelectorAll(Emphasize.query);
   for(var i = 0; i < blocks.length; i++) {
